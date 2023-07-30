@@ -12,8 +12,14 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: maven
+#      - name: Build with Maven
+#        run: mvn -B package --file pom.xml
       - name: Build with Maven
-        run: mvn -B package --file pom.xml
+        run: ./mvnw package  # Replace with the build command for your application
+
+      - name: Run Spring Boot application to download files
+        run: java -jar target/simple-rest-api.jar  # Replace with the actual name of your JAR file
+
   runs:
     needs: build
     runs-on: ubuntu-latest
