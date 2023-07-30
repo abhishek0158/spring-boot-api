@@ -22,3 +22,8 @@ jobs:
         run: mvn -B package --file pom.xml
       - name: Build and Run applications
         run: mvn spring-boot:run -Dspring-boot.run.profiles=dev -Dspring-boot.run.arguments=--cronparams=sitemap
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: outputs
+          path:
