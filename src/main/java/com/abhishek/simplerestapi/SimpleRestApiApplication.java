@@ -8,6 +8,9 @@ public class SimpleRestApiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SimpleRestApiApplication.class, args);
+		System.exit(0);
+
+
 	}
 
 }
