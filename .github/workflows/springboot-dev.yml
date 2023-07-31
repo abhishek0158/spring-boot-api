@@ -8,7 +8,7 @@ on:
 #      - master
  # workflow_dispatch:
 jobs:
-  build:
+  build-dev:
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
