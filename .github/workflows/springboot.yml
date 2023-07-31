@@ -1,7 +1,9 @@
 name: Deploy Simple Spring boot application
 on:
-  schedule:
-    - cron: '* * * * *'
+  push:
+    branches:
+      - master
+      - dev
   workflow_dispatch:
 #  push:
 #    branches:
