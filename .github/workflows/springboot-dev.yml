@@ -8,13 +8,13 @@ on:
 #      - master
  # workflow_dispatch:
 jobs:
-  build-dev:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
         uses: actions/checkout@v3
         with:
-          ref: dev
+          ref: master
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
@@ -25,3 +25,4 @@ jobs:
         run: mvn -B package --file pom.xml
       - name: Build and Run applications
         run: mvn spring-boot:run -Dspring-boot.run.profiles=dev -Dspring-boot.run.arguments=--cronparams=sitemap
+
